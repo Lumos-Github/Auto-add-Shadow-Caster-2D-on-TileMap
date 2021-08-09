@@ -13,17 +13,20 @@ public class ShadowCastersGeneratorEditor : Editor
         EditorGUILayout.Space();
         EditorGUILayout.Space();
         EditorGUILayout.Space();
-        if (GUILayout.Button("Destroy All Children"))
-        {
 
-            generator.DestroyAllChildren();
 
-        }
-        EditorGUILayout.Space();
         if (GUILayout.Button("Generate"))
         {
 
             generator.Generate();
+
+        }
+
+        EditorGUILayout.Space();
+        if (GUILayout.Button("Destroy All Children"))
+        {
+
+            generator.DestroyAllChildren();
 
         }
     }

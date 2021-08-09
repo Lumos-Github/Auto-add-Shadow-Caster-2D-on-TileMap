@@ -22,6 +22,7 @@ public class ShadowCaster2DTileMap : MonoBehaviour
                                     .GetMethod("GenerateShadowMesh", BindingFlags.Public | BindingFlags.Static);
     public void Generate()
     {
+        DestroyAllChildren();
 
         tilemapCollider = GetComponent<CompositeCollider2D>();
 
@@ -45,7 +46,7 @@ public class ShadowCaster2DTileMap : MonoBehaviour
             generateShadowMeshMethod.Invoke(shadowCasterComponent, new object[] { meshField.GetValue(shadowCasterComponent), shapePathField.GetValue(shadowCasterComponent) });
         }
 
-        Debug.Log("Generate");
+        // Debug.Log("Generate");
 
     }
     public void DestroyAllChildren()
